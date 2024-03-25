@@ -1,0 +1,142 @@
+/* Custom CSS Styles */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/* ScrollToTop.css */
+
+.scroll-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-top-btn.show {
+  display: block;
+}
+
+.scroll-top-btn:hover {
+  opacity: 0.5;
+}
+
+/* Add some margin to the top of each section */
+section {
+  margin-top: 20px;
+}
+
+/* Style for the profile picture */
+.profile-img {
+  border: 5px solid #fff;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 1s forwards;
+}
+
+.about_text {
+  font-size: 20px;
+}
+
+/* Style for skill images */
+.skill-image {
+  max-width: 50%;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style for project cards */
+.project-card {
+  transition: transform 0.3s ease-in-out;
+  margin: 30px 0px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.card_img {
+  height: 200px;
+}
+.project-card h5 {
+  height: 50px;
+}
+
+#contact {
+  background: #333;
+}
+
+.contact_section span {
+  font-size: 16px;
+}
+
+.mail_section a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Style for the footer */
+footer {
+  width: 100%;
+  background-color: #333;
+}
+
+/* Add hover effect on buttons */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add transition effect on form inputs */
+.form-control {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
