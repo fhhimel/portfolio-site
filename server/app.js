@@ -25,8 +25,19 @@ app.get("/api/test", (req, res) => {
   res.send("Server is successfully running!");
 });
 
-app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "dist")));
+// Serve static files from the specified directory
+app.use(
+  express.static(path.resolve(__dirname, "dist"), {
+    setHeaders: (res, filePath) => {
+      if (path.extname(filePath) === ".css") {
+        res.setHeader("Content-Type", "text/css");
+      }
+    },
+  })
+);
+
+// Serve the index.html file for all other routes
+app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "dist", "index.html"));
 });
 
