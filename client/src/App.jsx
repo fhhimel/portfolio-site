@@ -15,16 +15,16 @@ import ScrollToTop from "./ScrollToTop";
 function App() {
   const [demoData, setDemoData] = useState("data");
 
-  const handleSubmit = async (e) => {
-    try {
-      const response = await axios.get(`${window.location.origin}/api/test`);
-      // Handle successful login, e.g., store token in state or local storage
-      setDemoData(response.data);
-    } catch (error) {
-      // Handle login error, e.g., show an error message
-      console.log(error);
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   try {
+  //     const response = await axios.get(`${import.meta.env.VITE_NODE_API_URL}/api/test`);
+  //     // Handle successful login, e.g., store token in state or local storage
+  //     setDemoData(response.data);
+  //   } catch (error) {
+  //     // Handle login error, e.g., show an error message
+  //     console.log(error);
+  //   }
+  // };
   return (
     <>
       <div>
@@ -318,10 +318,7 @@ function App() {
           </div>
         </section>
 
-        <a onClick={handleSubmit} className="btn btn-primary">
-          Click me
-        </a>
-        <p>{demoData}</p>
+      
         {/* Footer */}
         <footer className="bg-dark text-white text-center py-3">
           <div className="container">
