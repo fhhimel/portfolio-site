@@ -175,6 +175,24 @@ function App() {
           <div className="container">
             <h2 className="text-center mb-4">Projects</h2>
             <div className="row">
+            <div className="col-md-4">
+                <div className="card project-card">
+                  <img
+                    src={project3}
+                    className="card-img-top card_img"
+                    alt="Project 1"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">Education Site</h5>
+                    <a
+                      href="https://react-learning-management-system-nine.vercel.app/"
+                      className="btn btn-dark"
+                    >
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div className="col-md-4">
                 <div className="card project-card">
                   <img
@@ -211,24 +229,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="card project-card">
-                  <img
-                    src={project3}
-                    className="card-img-top card_img"
-                    alt="Project 1"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Education Site</h5>
-                    <a
-                      href="https://react-learning-management-system-nine.vercel.app/"
-                      className="btn btn-dark"
-                    >
-                      Live Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
+            
               <div className="col-md-4">
                 <div className="card project-card">
                   <img
