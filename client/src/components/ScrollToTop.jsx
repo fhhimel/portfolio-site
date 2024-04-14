@@ -1,7 +1,6 @@
 // ScrollToTop.js
 
 import React, { useState, useEffect } from "react";
-import "./App.css"; // Custom CSS for styling
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);

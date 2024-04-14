@@ -4,7 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const todoRoutes = require("./routes/todoRoutes");
+const fileUpload = require("express-fileupload");
+const authRoutes = require("./routes/authRoutes");
+const projectRoutes = require("./routes/projectRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -15,9 +17,16 @@ mongoose.connect(`${process.env.MONGO_URL}`);
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+  })
+);
 
 // Routes
-app.use("/api", todoRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/project", projectRoutes);
+//app.use("/api/project", projectRoutes);
 
 //Test Route
 app.get("/api/test", (req, res) => {
