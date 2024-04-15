@@ -1,12 +1,6 @@
 const Project = require("../models/Project");
 const cloudinary = require("cloudinary").v2;
 
-// Configure Cloudinary (replace placeholders with your actual Cloudinary credentials)
-cloudinary.config({
-  cloud_name: "dd2jb03fi",
-  api_key: "639884458622366",
-  api_secret: "zRqyRW7kZgewyS5SpPirXSrmopU",
-});
 // cloudinary.config({
 //   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
 //   api_key: process.env.CLOUDINARY_API_KEY,
